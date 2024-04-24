@@ -5,15 +5,18 @@ st.write('Random Text')
 st.title('Aplikasi Konfigurasi Elektron')
 st.write('Hello, *friend* :sunglasses:')
 
-st.header('Aplikasi Penjumlahan Bilangan Numerik' , divider='rainbow')
+atomic_number = st.number_input("Masukkan nomer atom:", min_value=1, value=1)
+config = calculate_config(atomic_number)
+st.write("Konfigurasi Elektron")
+for shell, electrons in config:
+    st.write(f"shell {shell}: {electrons} elektron")
+if __name__ == "__main__":
+    main()
 
-angka_pertama = st.number_input('Masukan angka pertama')
-st.write('The first number is ', angka_pertama)
 
-angka_kedua = st.number_input('Masukan angka kedua')
-st.write('The second number is ', angka_kedua)
 
-operasi_matematika = angka_pertama * angka_kedua
-st.write(f"Angka pertama {angka_pertama} x Angka kedua {angka_kedua} = {operasi_matematika}")
+
+
+
          
 
